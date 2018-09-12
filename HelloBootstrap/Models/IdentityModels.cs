@@ -29,5 +29,7 @@ namespace HelloBootstrap.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<HelloBootstrap.Models.Album> Albums { get; set; }
     }
 }

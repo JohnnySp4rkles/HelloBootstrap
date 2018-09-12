@@ -1,0 +1,44 @@
+﻿@model IEnumerable<HelloBootstrap.Models.Album>
+
+@{
+    ViewBag.Title = "Albums";
+}
+
+<h2>All Albums</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-hover table-sm table-responsive-sm" style="margin-bottom:0px">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Band)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Band)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.AlbumID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.AlbumID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.AlbumID })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
