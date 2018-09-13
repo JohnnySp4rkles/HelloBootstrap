@@ -1,0 +1,34 @@
+﻿@import "../bootstrap/variables.less";
+
+@newColor: @abbr-border-color;
+
+.row {
+    border:double 2px #4cff00;
+    .col-md-4 {
+        > h2 {
+            color:@newColor;
+        }
+        > p {
+            background-color: orange;
+            font-size:48px;
+        }
+    }
+}
+
+.topBanner{
+    color:@brand-danger;
+    .container{
+        padding-left:10%;
+        padding-right:10%;
+        h1{
+
+        }
+        p{
+            > a{
+                .btn btn-primary btn-lg{
+
+                }
+            }
+        }
+    }
+}
